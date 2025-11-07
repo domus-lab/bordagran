@@ -8,92 +8,97 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 0 0% 100%;
-    --foreground: 220 40% 15%;
+    /* Base colors - Warm white background */
+    --background: 35 25% 98%;
+    --foreground: 240 25% 20%;
 
     /* Card components */
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 15%;
+    --card-foreground: 240 25% 20%;
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 15%;
+    --popover-foreground: 240 25% 20%;
 
-    /* Primary - Deep navy blue (professional, trustworthy) */
-    --primary: 220 60% 25%;
+    /* Primary - Vibrant purple (modern, creative, professional) */
+    --primary: 270 75% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 50% 35%;
+    --primary-light: 270 70% 65%;
+    --primary-dark: 270 80% 45%;
     
-    /* Secondary - Warm coral (energy, conversion) */
-    --secondary: 15 85% 60%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 15 85% 70%;
+    /* Secondary - Energetic lime green (fresh, dynamic) */
+    --secondary: 85 80% 55%;
+    --secondary-foreground: 240 25% 20%;
+    --secondary-light: 85 75% 65%;
 
-    /* Muted - Elegant grays */
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 15% 45%;
+    /* Accent - Bright coral/orange (warmth, action) */
+    --accent: 15 90% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 15 85% 75%;
 
-    /* Accent - Supporting color */
-    --accent: 220 20% 92%;
-    --accent-foreground: 220 60% 25%;
+    /* Muted - Soft neutral grays */
+    --muted: 35 15% 94%;
+    --muted-foreground: 240 10% 50%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     /* Border and input */
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 60% 25%;
+    --border: 240 10% 88%;
+    --input: 240 10% 88%;
+    --ring: 270 75% 55%;
 
     /* Radius */
     --radius: 0.75rem;
 
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 60% 25%) 0%, hsl(220 50% 35%) 100%);
-    --gradient-overlay: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+    /* Custom gradients - Luminous and deep */
+    --gradient-hero: linear-gradient(135deg, hsl(270 75% 55%) 0%, hsl(270 70% 65%) 50%, hsl(85 80% 55%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(270 75% 55% / 0.15) 0%, hsla(270 75% 55% / 0.05) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(35 25% 98%) 100%);
     
-    /* Shadows */
-    --shadow-soft: 0 2px 20px -5px hsl(220 60% 25% / 0.15);
-    --shadow-medium: 0 8px 30px -5px hsl(220 60% 25% / 0.25);
-    --shadow-strong: 0 20px 50px -10px hsl(220 60% 25% / 0.35);
+    /* Shadows - Colorful and vibrant */
+    --shadow-soft: 0 4px 24px -4px hsl(270 75% 55% / 0.12);
+    --shadow-medium: 0 10px 40px -5px hsl(270 75% 55% / 0.2);
+    --shadow-strong: 0 24px 60px -10px hsl(270 75% 55% / 0.3);
+    --shadow-accent: 0 8px 32px -6px hsl(85 80% 55% / 0.25);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-glow: all 0.35s ease-in-out;
   }
 
   .dark {
-    --background: 220 40% 8%;
-    --foreground: 0 0% 95%;
+    --background: 240 30% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 35% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 240 25% 14%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 35% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 240 25% 14%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 220 50% 45%;
+    --primary: 270 70% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 220 45% 55%;
+    --primary-light: 270 65% 70%;
 
-    --secondary: 15 85% 65%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 15 85% 75%;
+    --secondary: 85 75% 60%;
+    --secondary-foreground: 240 25% 20%;
+    --secondary-light: 85 70% 70%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 220 10% 65%;
+    --accent: 15 85% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --accent: 220 25% 20%;
-    --accent-foreground: 0 0% 95%;
+    --muted: 240 20% 20%;
+    --muted-foreground: 240 10% 70%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 22%;
-    --input: 220 20% 22%;
-    --ring: 220 50% 45%;
+    --border: 240 20% 25%;
+    --input: 240 20% 25%;
+    --ring: 270 70% 60%;
   }
 }
 
@@ -118,6 +123,10 @@ All colors MUST be HSL.
 
   .gradient-overlay {
     background: var(--gradient-overlay);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
   }
 
   .shadow-soft {
