@@ -15,7 +15,7 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34655368125" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-8 font-semibold shadow-lg">
                 <Phone className="mr-2 h-5 w-5" />
                 Contactar Ahora

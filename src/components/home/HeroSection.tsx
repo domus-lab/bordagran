@@ -32,7 +32,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34655368125" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="default" className="text-lg px-12 py-8 font-semibold">
                 <Phone className="mr-2 h-5 w-5" />
                 Contactar por WhatsApp

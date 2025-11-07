@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoLight from "@/assets/logo-light.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,13 +33,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">PT</span>
-            </div>
-            <span className="font-bold text-xl text-foreground hidden sm:block">
-              Textil Premium
-            </span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src={logoLight} 
+              alt="Bordagran" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ const Header = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/34655368125" target="_blank" rel="noopener noreferrer">
               <Button variant="default" size="lg" className="bg-secondary hover:bg-secondary-light">
                 <Phone className="mr-2 h-4 w-4" />
                 WhatsApp
@@ -89,7 +89,7 @@ const Header = () => {
                 </Link>
               ))}
               <a
-                href="https://wa.me/34600000000"
+                href="https://wa.me/34655368125"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="pt-4"

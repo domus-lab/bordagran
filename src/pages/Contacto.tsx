@@ -69,8 +69,8 @@ const Contacto = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Teléfono</h3>
-                        <a href="tel:+34600000000" className="text-muted-foreground hover:text-secondary transition-smooth">
-                          +34 600 000 000
+                        <a href="tel:+34655368125" className="text-muted-foreground hover:text-secondary transition-smooth">
+                          +34 655 368 125
                         </a>
                       </div>
                     </div>
@@ -82,7 +82,7 @@ const Contacto = () => {
                       <div>
                         <h3 className="font-semibold mb-1">WhatsApp</h3>
                         <a 
-                          href="https://wa.me/34600000000" 
+                          href="https://wa.me/34655368125" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-muted-foreground hover:text-secondary transition-smooth"
@@ -98,8 +98,8 @@ const Contacto = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <a href="mailto:info@textilpremium.com" className="text-muted-foreground hover:text-secondary transition-smooth">
-                          info@textilpremium.com
+                        <a href="mailto:info@bordagran.com" className="text-muted-foreground hover:text-secondary transition-smooth">
+                          info@bordagran.com
                         </a>
                       </div>
                     </div>
@@ -111,7 +111,8 @@ const Contacto = () => {
                       <div>
                         <h3 className="font-semibold mb-1">Ubicación</h3>
                         <p className="text-muted-foreground">
-                          Madrid, España
+                          Calle Jerez bajo comercial<br />
+                          18004 Granada, España
                         </p>
                       </div>
                     </div>
@@ -205,7 +206,7 @@ const Contacto = () => {
                     <Button type="submit" size="lg" className="bg-secondary hover:bg-secondary-light">
                       Enviar Mensaje
                     </Button>
-                    <a href="https://wa.me/34600000000" target="_blank" rel="noopener noreferrer" className="flex-1">
+                    <a href="https://wa.me/34655368125" target="_blank" rel="noopener noreferrer" className="flex-1">
                       <Button type="button" variant="outline" size="lg" className="w-full">
                         <MessageSquare className="mr-2 h-5 w-5" />
                         Chatear por WhatsApp
