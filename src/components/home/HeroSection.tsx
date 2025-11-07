@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-workshop-v2.jpg";
+import heroImage from "@/assets/hero-workshop.jpg";
 
 const HeroSection = () => {
   return (
