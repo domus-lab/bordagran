@@ -25,39 +25,39 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Cómo Funciona
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Proceso simple y transparente en 4 pasos
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
                 <div key={index} className="relative">
                   {/* Connector Line (hidden on mobile, shown on desktop) */}
                   {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-primary/20 -z-10" />
+                    <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-border -z-10" />
                   )}
                   
                   <div className="text-center">
-                    <div className="relative inline-block mb-4">
-                      <div className="w-20 h-20 bg-secondary rounded-2xl flex items-center justify-center">
-                        <Icon className="w-10 h-10 text-secondary-foreground" />
+                    <div className="relative inline-block mb-6">
+                      <div className="w-24 h-24 bg-muted rounded-2xl flex items-center justify-center shadow-sm">
+                        <Icon className="w-12 h-12 text-primary" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                      <div className="absolute -top-2 -right-2 w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold shadow-md">
                         {index + 1}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground text-sm">{step.description}</p>
+                    <h3 className="text-xl font-bold mb-4 text-foreground">{step.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               );

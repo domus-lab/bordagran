@@ -8,19 +8,19 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - Warm white background */
-    --background: 35 25% 98%;
-    --foreground: 240 25% 20%;
+    /* Base colors - Pure white and light backgrounds */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
 
     /* Card components */
     --card: 0 0% 100%;
-    --card-foreground: 240 25% 20%;
+    --card-foreground: 220 20% 15%;
 
     /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 240 25% 20%;
+    --popover-foreground: 220 20% 15%;
 
-    /* Primary - Vibrant purple (modern, creative, professional) */
+    /* Primary - Vibrant purple (modern, creative) */
     --primary: 270 75% 55%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 270 70% 65%;
@@ -28,7 +28,7 @@ All colors MUST be HSL.
     
     /* Secondary - Energetic lime green (fresh, dynamic) */
     --secondary: 85 80% 55%;
-    --secondary-foreground: 240 25% 20%;
+    --secondary-foreground: 220 20% 15%;
     --secondary-light: 85 75% 65%;
 
     /* Accent - Bright coral/orange (warmth, action) */
@@ -37,46 +37,41 @@ All colors MUST be HSL.
     --accent-light: 15 85% 75%;
 
     /* Muted - Soft neutral grays */
-    --muted: 35 15% 94%;
-    --muted-foreground: 240 10% 50%;
+    --muted: 220 10% 97%;
+    --muted-foreground: 220 15% 45%;
 
     /* Destructive */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
     /* Border and input */
-    --border: 240 10% 88%;
-    --input: 240 10% 88%;
+    --border: 220 15% 92%;
+    --input: 220 15% 92%;
     --ring: 270 75% 55%;
 
     /* Radius */
     --radius: 0.75rem;
-
-    /* Custom gradients - Luminous and deep */
-    --gradient-hero: linear-gradient(135deg, hsl(270 75% 55%) 0%, hsl(270 70% 65%) 50%, hsl(85 80% 55%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(270 75% 55% / 0.15) 0%, hsla(270 75% 55% / 0.05) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(35 25% 98%) 100%);
     
-    /* Shadows - Colorful and vibrant */
-    --shadow-soft: 0 4px 24px -4px hsl(270 75% 55% / 0.12);
-    --shadow-medium: 0 10px 40px -5px hsl(270 75% 55% / 0.2);
-    --shadow-strong: 0 24px 60px -10px hsl(270 75% 55% / 0.3);
-    --shadow-accent: 0 8px 32px -6px hsl(85 80% 55% / 0.25);
+    /* Soft, realistic shadows */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-glow: all 0.35s ease-in-out;
   }
 
   .dark {
-    --background: 240 30% 10%;
+    --background: 220 25% 12%;
     --foreground: 0 0% 98%;
 
-    --card: 240 25% 14%;
+    --card: 220 20% 16%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 25% 14%;
+    --popover: 220 20% 16%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 270 70% 60%;
@@ -84,20 +79,20 @@ All colors MUST be HSL.
     --primary-light: 270 65% 70%;
 
     --secondary: 85 75% 60%;
-    --secondary-foreground: 240 25% 20%;
+    --secondary-foreground: 220 20% 15%;
     --secondary-light: 85 70% 70%;
 
     --accent: 15 85% 70%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 240 20% 20%;
-    --muted-foreground: 240 10% 70%;
+    --muted: 220 18% 22%;
+    --muted-foreground: 220 10% 65%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 20% 25%;
-    --input: 240 20% 25%;
+    --border: 220 18% 25%;
+    --input: 220 18% 25%;
     --ring: 270 70% 60%;
   }
 }
@@ -109,36 +104,42 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.7;
   }
 
   html {
     scroll-behavior: smooth;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.8;
+  }
 }
 
 @layer utilities {
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .shadow-xs {
+    box-shadow: var(--shadow-xs);
   }
 
-  .gradient-overlay {
-    background: var(--gradient-overlay);
+  .shadow-sm {
+    box-shadow: var(--shadow-sm);
   }
 
-  .gradient-card {
-    background: var(--gradient-card);
+  .shadow-md {
+    box-shadow: var(--shadow-md);
   }
 
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
+  .shadow-lg {
+    box-shadow: var(--shadow-lg);
   }
 
-  .shadow-medium {
-    box-shadow: var(--shadow-medium);
-  }
-
-  .shadow-strong {
-    box-shadow: var(--shadow-strong);
+  .shadow-xl {
+    box-shadow: var(--shadow-xl);
   }
 
   .transition-smooth {
@@ -150,10 +151,10 @@ All colors MUST be HSL.
   }
 
   .hover-lift {
-    @apply transition-smooth hover:-translate-y-1 hover:shadow-medium;
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-lg;
   }
 
   .hover-scale {
-    @apply transition-smooth hover:scale-105;
+    @apply transition-smooth hover:scale-[1.02];
   }
 }

@@ -24,32 +24,32 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-32 bg-muted">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Lo Que Dicen Nuestros Clientes
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             La confianza de empresas y particulares que repiten con nosotros
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover-lift shadow-medium border-none">
-              <CardContent className="p-8">
-                <div className="flex mb-4">
+            <Card key={index} className="hover-lift shadow-md bg-white border border-border">
+              <CardContent className="p-10">
+                <div className="flex mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-6 italic">
+                <p className="text-muted-foreground mb-8 italic leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 <div>
-                  <div className="font-bold">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                  <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{testimonial.company}</div>
                 </div>
               </CardContent>
             </Card>
